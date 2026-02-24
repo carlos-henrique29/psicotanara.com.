@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tanara Richter Pires | Psicóloga | Atendimento Online e Presencial</title>
+  <meta name="description" content="Psicóloga Tanara Richter Pires. Atendimento online 24h para agendamento e presencial com hora marcada. Acolhimento, escuta qualificada e cuidado ético." />
+  <meta name="theme-color" content="#f6f3ff" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tanara Richter Pires | Psicóloga" />
+  <meta property="og:description" content="Atendimento online 24h para agendamento e presencial com hora marcada. Agende pelo WhatsApp." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Basic favicon (optional) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='50' font-size='48'>🌿</text></svg>">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Psychologist",
+    "name": "Tanara Richter Pires",
+    "email": "tanararp@hotmail.com",
+    "areaServed": "Porto Alegre - RS e online",
+    "availableService": [
+      {"@type":"Service","name":"Atendimento psicológico online"},
+      {"@type":"Service","name":"Atendimento psicológico presencial (com hora marcada)"}
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg: #fbfaff;
+      --panel: rgba(255,255,255,.75);
+      --card: rgba(255,255,255,.85);
+      --text: #1f1f2a;
+      --muted: #5a5a74;
+      --brand: #7a5cff;
+      --brand2:#62c7b6;
+      --line: rgba(31,31,42,.10);
+      --shadow: 0 12px 40px rgba(20, 10, 60, .08);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1100px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 10% 10%, rgba(122,92,255,.10), transparent 60%),
+        radial-gradient(1000px 700px at 90% 20%, rgba(98,199,182,.12), transparent 60%),
+        radial-gradient(900px 600px at 50% 100%, rgba(122,92,255,.08), transparent 60%),
+        var(--bg);
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .container{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
+
+    /* Topbar */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(251,250,255,.70);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar .wrap{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 0;
+      gap: 16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:-.02em;
+    }
+    .logo{
+      width:34px; height:34px; border-radius: 12px;
+      background: linear-gradient(135deg, rgba(122,92,255,.18), rgba(98,199,182,.18));
+      border: 1px solid rgba(31,31,42,.08);
+      display:grid; place-items:center;
+      box-shadow: 0 8px 20px rgba(122,92,255,.10);
+    }
+    .nav{
+      display:flex; align-items:center; gap:16px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav a{
+      font-weight:600;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius: 12px;
+    }
+    .nav a:hover{ background: rgba(122,92,255,.08); color:var(--text); }
+
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(31,31,42,.10);
+      background: rgba(255,255,255,.70);
+      box-shadow: 0 8px 24px rgba(20,10,60,.06);
+      font-weight:700;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(122,92,255,.25); }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(122,92,255,.95), rgba(98,199,182,.95));
+      color:white;
+      border-color: transparent;
+    }
+    .btn.primary:hover{ transform: translateY(-1px) scale(1.01); }
+
+    /* Hero */
+    header.hero{
+      padding: 54px 0 26px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 22px;
+      align-items:stretch;
+    }
+    .panel{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      position:relative;
+      overflow:hidden;
+    }
+    .panel:before{
+      content:"";
+      position:absolute; inset:-60px -80px auto auto;
+      width:220px; height:220px;
+      background: radial-gradient(circle, rgba(122,92,255,.22), transparent 60%);
+      filter: blur(2px);
+      transform: rotate(12deg);
+      pointer-events:none;
+    }
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(122,92,255,.10);
+      border: 1px solid rgba(122,92,255,.14);
+      font-weight:700;
+      color: rgba(60,40,140,.95);
+      letter-spacing:.01em;
+      margin-bottom: 12px;
+      font-size: 13px;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(30px, 4vw, 46px);
+      letter-spacing:-.03em;
+      line-height:1.04;
+    }
+    .lead{
+      color:var(--muted);
+      font-size: 16px;
+      line-height:1.65;
+      margin: 0 0 18px;
+    }
+    .hero-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 10px; }
+    .chips{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 16px; }
+    .chip{
+      padding: 10px 12px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.72);
+      color: var(--muted);
+      font-weight:700;
+      font-size: 13px;
+    }
+
+    /* Side card */
+    .side{
+      display:flex; flex-direction:column; gap:12px;
+    }
+    .mini{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .mini h3{ margin:0 0 8px; font-size: 16px; letter-spacing:-.02em; }
+    .mini p{ margin:0; color:var(--muted); line-height:1.6; font-size:14px; }
+    .kv{
+      display:grid; gap:10px; margin-top: 14px;
+    }
+    .kv .row{
+      display:flex; justify-content:space-between; gap:10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(122,92,255,.06);
+      border:1px solid rgba(122,92,255,.10);
+      font-weight:700;
+      font-size: 13px;
+    }
+    .kv .row span{ color: var(--muted); font-weight:700; }
+    .kv .row b{ font-weight:800; }
+
+    /* Sections */
+    section{ padding: 22px 0; }
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
+      margin: 8px 0 14px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size: 22px;
+      letter-spacing:-.03em;
+    }
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      max-width: 54ch;
+      line-height:1.6;
+      font-size: 14px;
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .card h3{ margin: 0 0 8px; font-size: 16px; letter-spacing:-.02em; }
+    .card p{ margin:0; color:var(--muted); line-height:1.6; font-size: 14px; }
+    .tag{
+      display:inline-flex; align-items:center; gap:8px;
+      font-weight:800;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(98,199,182,.12);
+      border: 1px solid rgba(98,199,182,.18);
+      color: rgba(18,90,80,.95);
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    /* Scheduling */
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    form{
+      display:grid; gap: 10px;
+    }
+    label{ font-weight:800; font-size: 13px; }
+    .field{
+      display:grid; gap:6px;
+    }
+    input, select, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(31,31,42,.12);
+      background: rgba(255,255,255,.75);
+      font-family: inherit;
+      outline: none;
+      transition: border-color .12s ease, box-shadow .12s ease;
+      font-size: 14px;
+    }
+    textarea{ min-height: 110px; resize: vertical; }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(122,92,255,.35);
+      box-shadow: 0 0 0 4px rgba(122,92,255,.12);
+    }
+    .fine{
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .checkbox{
+      display:flex; gap:10px; align-items:flex-start;
+      padding: 12px;
+      border-radius: 16px;
+      border: 1px dashed rgba(31,31,42,.16);
+      background: rgba(255,255,255,.62);
+    }
+    .checkbox input{ width:auto; margin-top: 3px; }
+    .actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top: 6px;
+    }
+
+    /* FAQ */
+    details{
+      background: rgba(255,255,255,.70);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px 14px;
+      box-shadow: 0 10px 28px rgba(20,10,60,.05);
+    }
+    details summary{
+      cursor:pointer;
+      font-weight:900;
+      letter-spacing:-.02em;
+    }
+    details p{ margin:10px 0 0; color:var(--muted); line-height:1.65; font-size: 14px; }
+
+    /* Footer */
+    footer{
+      padding: 26px 0 40px;
+      color: var(--muted);
+    }
+    .footer-grid{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:14px;
+      flex-wrap:wrap;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+    .small{ font-size: 12px; line-height:1.6; max-width: 70ch; }
+
+    /* Floating WhatsApp */
+    .wa-float{
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 60;
+    }
+    .wa-float a{
+      display:flex; align-items:center; gap:10px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(98,199,182,.95), rgba(122,92,255,.92));
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 16px 42px rgba(20,10,60,.18);
+      border: 1px solid rgba(255,255,255,.25);
+    }
+
+    /* Responsive */
+    @media (max-width: 960px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .grid3{ grid-template-columns: 1fr; }
+      .split{ grid-template-columns: 1fr; }
+      .nav{ display:none; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="wrap">
+        <a class="brand" href="#topo" aria-label="Voltar ao topo">
+          <span class="logo" aria-hidden="true">🌿</span>
+          <span>Tanara Richter Pires</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#especialidades">Atendimentos</a>
+          <a href="#agendar">Agendar</a>
+          <a href="#faq">Dúvidas</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="cta">
+          <a class="btn" href="mailto:tanararp@hotmail.com?subject=Contato%20pelo%20site%20-%20Tanara%20Richter%20Pires" aria-label="Enviar e-mail">
+            ✉️ <span>E-mail</span>
+          </a>
+          <a class="btn primary" id="btnTopoWhats" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+            💬 <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero" id="topo">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="panel">
+          <div class="kicker">Atendimento online • presencial com hora marcada</div>
+          <h1>Um espaço seguro para você se escutar com calma, sem julgamentos.</h1>
+          <p class="lead">
+            Sou <b>Tanara Richter Pires</b>, psicóloga. Meu trabalho é oferecer acolhimento e uma escuta qualificada,
+            respeitando seu tempo, sua história e suas necessidades.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#agendar">📅 Agendar agora</a>
+            <a class="btn" id="btnHeroWhats" href="#" target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+            <a class="btn" href="#como-funciona">🧭 Entenda o processo</a>
+          </div>
+
+          <div class="chips" aria-label="Destaques">
+            <span class="chip">Online 24h para solicitar agendamento</span>
+            <span class="chip">Sessões com hora marcada</span>
+            <span class="chip">Ambiente ético e confidencial</span>
+          </div>
+        </div>
+
+        <div class="side">
+          <div class="mini">
+            <h3>Disponibilidade</h3>
+            <p>
+              Atendimento <b>online</b> (solicitação 24h) e <b>presencial</b> com hora marcada.
+              Você pode pedir um horário a qualquer momento pelo WhatsApp.
+            </p>
+
+            <div class="kv" role="list">
+              <div class="row" role="listitem"><span>Modalidade</span><b>Online / Presencial</b></div>
+              <div class="row" role="listitem"><span>Agendamento</span><b>24h (mensagem)</b></div>
+              <div class="row" role="listitem"><span>Contato</span><b>WhatsApp / E-mail</b></div>
+            </div>
+          </div>
+
+          <div class="mini">
+            <h3>Primeiro contato</h3>
+            <p>
+              Se quiser, me conte brevemente o que está buscando. A partir disso, combinamos o melhor horário e formato.
+            </p>
+            <div class="actions">
+              <a class="btn primary" id="btnSideWhats" href="#" target="_blank" rel="noopener">💬 Quero falar agora</a>
+              <a class="btn" href="#faq">❓ Dúvidas frequentes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sobre -->
+  <section id="sobre">
+    <div class="container">
+      <div class="section-head">
+        <h2>Sobre a Tanara</h2>
+        <p>
+          Um atendimento centrado em respeito, escuta e construção de caminhos possíveis — com cuidado e ética profissional.
+        </p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="tag">🌸 Acolhimento</div>
+          <h3>Escuta com presença</h3>
+          <p>
+            Um espaço para você falar do que sente, com segurança e sem pressa — valorizando sua experiência e sua história.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="tag">🧩 Processo</div>
+          <h3>Clareza e alinhamento</h3>
+          <p>
+            Desde o primeiro contato, combinamos objetivos, frequência e formato, de forma transparente e cuidadosa.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="tag">🔒 Ética e sigilo</div>
+          <h3>Confidencialidade</h3>
+          <p>
+            Privacidade e respeito são prioridade. O atendimento segue princípios éticos da Psicologia e boas práticas.
+          </p>
+        </div>
+      </div>
+
+      <p class="fine" style="margin-top:12px">
+        *Este site tem caráter informativo e de contato profissional. Não há promessas de resultados, “cura” ou garantias.
+      </p>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section id="como-funciona">
+    <div class="container">
+      <div class="section-head">
+        <h2>Como funciona</h2>
+        <p>
+          Um fluxo simples, acolhedor e objetivo para facilitar seu agendamento e tirar dúvidas comuns antes da primeira sessão.
+        </p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="tag">1️⃣ Contato</div>
+          <h3>Você me chama</h3>
+          <p>Envie uma mensagem pelo WhatsApp ou e-mail. Você pode fazer isso a qualquer hora.</p>
+        </div>
+        <div class="card">
+          <div class="tag">2️⃣ Agendamento</div>
+          <h3>Definimos o melhor horário</h3>
+          <p>Combinamos dia, hora e modalidade (online/presencial). Sessões sempre com hora marcada.</p>
+        </div>
+        <div class="card">
+          <div class="tag">3️⃣ Sessão</div>
+          <h3>Seu espaço de cuidado</h3>
+          <p>Com confidencialidade e respeito, vamos construindo clareza e caminhos possíveis ao longo do processo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Atendimentos / Especialidades -->
+  <section id="especialidades">
+    <div class="container">
+      <div class="section-head">
+        <h2>Atendimentos</h2>
+        <p>
+          Aqui você pode descrever os focos de atuação (se desejar). Abaixo deixei opções comuns em sites do ramo.
+        </p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="tag">🌙 Bem-estar emocional</div>
+          <h3>Ansiedade e estresse</h3>
+          <p>Organizar pensamentos, entender gatilhos e fortalecer recursos internos para lidar com o cotidiano.</p>
+        </div>
+        <div class="card">
+          <div class="tag">🤍 Relações</div>
+          <h3>Autoestima e limites</h3>
+          <p>Autoconhecimento, relações mais saudáveis e construção de autonomia emocional.</p>
+        </div>
+        <div class="card">
+          <div class="tag">🌿 Fases da vida</div>
+          <h3>Transições e mudanças</h3>
+          <p>Processos de mudança, luto, recomeços, decisões difíceis e adaptação a novas rotinas.</p>
+        </div>
+      </div>
+
+      <p class="fine" style="margin-top:12px">
+        Se quiser, me diga a abordagem e o público (adulto, adolescente etc.) que eu ajusto as descrições com precisão.
+      </p>
+    </div>
+  </section>
+
+  <!-- Agendamento -->
+  <section id="agendar">
+    <div class="container">
+      <div class="section-head">
+        <h2>Agendar consulta</h2>
+        <p>
+          Preencha para gerar uma mensagem automática no WhatsApp (mais rápido). Seus dados são usados apenas para contato.
+        </p>
+      </div>
+
+      <div class="split">
+        <div class="card">
+          <h3 style="margin-top:0">Formulário de pré-agendamento</h3>
+
+          <form id="formAgendar">
+            <div class="field">
+              <label for="nome">Seu nome</label>
+              <input id="nome" name="nome" autocomplete="name" placeholder="Ex.: Maria" required />
+            </div>
+
+            <div class="field">
+              <label for="telefone">Seu WhatsApp (opcional)</label>
+              <input id="telefone" name="telefone" autocomplete="tel" placeholder="Ex.: (51) 9xxxx-xxxx" />
+            </div>
+
+            <div class="field">
+              <label for="modalidade">Modalidade</label>
+              <select id="modalidade" name="modalidade" required>
+                <option value="" selected disabled>Selecione</option>
+                <option>Online</option>
+                <option>Presencial (hora marcada)</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="turno">Preferência de turno</label>
+              <select id="turno" name="turno" required>
+                <option value="" selected disabled>Selecione</option>
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+                <option>Indiferente</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="data">Sugestão de data (opcional)</label>
+              <input id="data" name="data" type="date" />
+            </div>
+
+            <div class="field">
+              <label for="mensagem">Mensagem (opcional)</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Se quiser, descreva brevemente o que você está buscando."></textarea>
+            </div>
+
+            <div class="checkbox">
+              <input id="consent" type="checkbox" required />
+              <div class="fine">
+                <b>Consentimento LGPD:</b> autorizo o uso dos dados acima exclusivamente para contato e agendamento.
+                Você pode solicitar remoção a qualquer momento.
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="btn primary" type="submit">💬 Enviar no WhatsApp</button>
+              <a class="btn" id="btnEmailAgendar" href="mailto:tanararp@hotmail.com?subject=Agendamento%20-%20Tanara%20Richter%20Pires">✉️ Enviar por e-mail</a>
+            </div>
+
+            <p class="fine">
+              Observação: agendamento online pode ser solicitado 24h via mensagem, e a sessão acontece com hora marcada.
+            </p>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top:0">Contato rápido</h3>
+          <p style="color:var(--muted); line-height:1.65; font-size:14px; margin-top:0">
+            Se você preferir, pode chamar direto. A mensagem já vai com um texto pronto para facilitar.
+          </p>
+
+          <div class="actions" style="margin-top:12px">
+            <a class="btn primary" id="btnAgendarWhats" href="#" target="_blank" rel="noopener">📲 Abrir WhatsApp</a>
+            <a class="btn" href="#contato">📍 Ver contatos</a>
+          </div>
+
+          <div class="mini" style="margin-top:14px">
+            <h3>Horário de atendimento</h3>
+            <p>
+              <b>Online:</b> 24h para contato/solicitação de agendamento.<br />
+              <b>Presencial:</b> com hora marcada.
+            </p>
+          </div>
+
+          <p class="fine" style="margin-top:12px">
+            LGPD: os dados enviados no formulário são para contato e agendamento, com finalidade clara e consentimento. :contentReference[oaicite:3]{index=3}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <h2>Dúvidas frequentes</h2>
+        <p>Respostas objetivas para você se sentir mais seguro(a) antes de agendar.</p>
+      </div>
+
+      <div class="grid3">
+        <details>
+          <summary>Como funciona a primeira sessão?</summary>
+          <p>
+            É um momento de acolhimento e compreensão da sua demanda. Você traz o que estiver confortável em compartilhar,
+            e combinamos juntos os próximos passos.
+          </p>
+        </details>
+
+        <details>
+          <summary>Atendimento online é seguro?</summary>
+          <p>
+            Sim — quando realizado em ambiente reservado e com cuidado. Recomendo fones e um lugar onde você se sinta à vontade.
+          </p>
+        </details>
+
+        <details>
+          <summary>Você atende urgências?</summary>
+          <p>
+            Este canal é para agendamento. Em situações de risco imediato, procure pronto atendimento da sua cidade ou ligue 188 (CVV).
+          </p>
+        </details>
+      </div>
+
+      <p class="fine" style="margin-top:12px">
+        Divulgação profissional segue cuidados éticos; por isso não exibimos “antes e depois”, promessas de cura ou exposição de pacientes. :contentReference[oaicite:4]{index=4}
+      </p>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contato</h2>
+        <p>Escolha o canal mais confortável para você. Resposta por ordem de recebimento.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="tag">💬 WhatsApp</div>
+          <h3>Mensagem direta</h3>
+          <p>Clique no botão e envie uma mensagem com sua preferência de horário.</p>
+          <div class="actions" style="margin-top:12px">
+            <a class="btn primary" id="btnContatoWhats" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="tag">✉️ E-mail</div>
+          <h3>tanararp@hotmail.com</h3>
+          <p>Se preferir, envie um e-mail com nome, modalidade e horários possíveis.</p>
+          <div class="actions" style="margin-top:12px">
+            <a class="btn" href="mailto:tanararp@hotmail.com?subject=Contato%20pelo%20site%20-%20Tanara%20Richter%20Pires">Enviar e-mail</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="tag">📍 Presencial</div>
+          <h3>Local (com hora marcada)</h3>
+          <p>
+            Você pode colocar aqui o endereço do consultório (se quiser). Por enquanto deixei como “sob agendamento”.
+          </p>
+          <p class="fine" style="margin-top:10px">
+            Dica: mostrar localização/como chegar é comum em sites do ramo e ajuda na decisão. :contentReference[oaicite:5]{index=5}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="gap:10px; margin-bottom:8px">
+            <span class="logo" aria-hidden="true">🌿</span>
+            <span>Tanara Richter Pires</span>
+          </div>
+          <div class="small">
+            Conteúdo informativo e de divulgação profissional. Não substitui avaliação de urgência.
+            Para emergências, procure atendimento imediato.
+          </div>
+        </div>
+
+        <div class="small">
+          <b>Contato:</b> WhatsApp (botão no site) • E-mail: tanararp@hotmail.com<br/>
+          <b>Atendimento:</b> Online (contato 24h) • Presencial (hora marcada)
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="wa-float" aria-label="Botão flutuante do WhatsApp">
+    <a id="btnFloatWhats" href="#" target="_blank" rel="noopener">
+      💬 WhatsApp
+    </a>
+  </div>
+
+  <script>
+    // === CONFIG ===
+    // Número fornecido pelo usuário: 5196414630
+    // Link oficial WhatsApp: https://wa.me/<numero_em_formato_internacional>  (sem +, espaços ou traços)
+    // Usando DDI Brasil (55)
+    const phoneRaw = "5196414630";
+    const phoneIntl = "55" + phoneRaw;
+    const baseWa = `https://wa.me/${phoneIntl}`;
+
+    function waLink(message){
+      const text = encodeURIComponent(message);
+      return `${baseWa}?text=${text}`;
+    }
+
+    const defaultMsg = "Olá, Tanara! Vim pelo seu site e gostaria de agendar uma consulta. Pode me informar horários disponíveis?";
+
+    // Set all WhatsApp buttons
+    const waButtons = [
+      "btnTopoWhats","btnHeroWhats","btnSideWhats","btnAgendarWhats","btnContatoWhats","btnFloatWhats"
+    ];
+
+    waButtons.forEach(id=>{
+      const el = document.getElementById(id);
+      if(el) el.href = waLink(defaultMsg);
+    });
+
+    // Form -> WhatsApp message generator
+    const form = document.getElementById("formAgendar");
+    form.addEventListener("submit", (e)=>{
+      e.preventDefault();
+
+      const nome = document.getElementById("nome").value.trim();
+      const tel = document.getElementById("telefone").value.trim();
+      const modalidade = document.getElementById("modalidade").value;
+      const turno = document.getElementById("turno").value;
+      const data = document.getElementById("data").value;
+      const msg = document.getElementById("mensagem").value.trim();
+
+      const parts = [];
+      parts.push(`Olá, Tanara! Meu nome é ${nome}.`);
+      parts.push(`Gostaria de agendar uma consulta (${modalidade}).`);
+      parts.push(`Preferência de turno: ${turno}.`);
+      if(data) parts.push(`Sugestão de data: ${data}.`);
+      if(tel) parts.push(`Meu WhatsApp: ${tel}.`);
+      if(msg) parts.push(`Mensagem: ${msg}`);
+      parts.push("Vim pelo seu site. Obrigado(a)!");
+
+      window.open(waLink(parts.join(" ")), "_blank", "noopener");
+    });
+  </script>
+</body>
+</html>
